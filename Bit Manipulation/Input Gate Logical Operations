@@ -1,0 +1,29 @@
+package bit_Manupulation;
+import java.util.Scanner;
+public class P_6 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Value for A B C D E F :- ");
+		int a =sc.nextInt();
+		int b=sc.nextInt();
+		int c=sc.nextInt();
+		int d=sc.nextInt();
+		int e=sc.nextInt();
+		int f=sc.nextInt();
+		int res=((~a)&b)|(c&d)|(e&(~f)); 
+		System.out.println(res);
+	}
+}
+
+-------------------------------------------
+Other way to solve
+
+int a1=(~A)&B;
+int a2=C&D;
+int a3=E&(~F);
+if(a1+a2+a3>0){
+   return 1;
+}else{
+   return 0;
+}
