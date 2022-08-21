@@ -1,0 +1,22 @@
+package bit_Manupulation;
+import java.util.Scanner;
+public class P_11 {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		int c=0;
+		int r=0;
+		int temp=n;
+		while(temp>0) {
+			if((temp&1)==1) {
+				c=c+1;
+			}else {
+				r=r+1;
+			}
+			temp=temp>>1;
+		}
+		int xor=c^r;
+		System.out.println(xor);
+	}
+}
