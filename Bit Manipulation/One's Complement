@@ -1,0 +1,42 @@
+1> USING String
+package bit_Manupulation;
+import java.util.Scanner;
+public class P_16 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		String s=Integer.toString(n,2);
+		int l=s.length();
+		String S="";
+		for(int i=0;i<l;i=i+1) {
+			char c=s.charAt(i);
+			if(c=='1') {
+				S=S+'0';
+			}else {
+				S=S+'1';
+			}
+		}
+		int d=Integer.parseInt(S,2);
+		System.out.println(d);
+	}
+
+}
+
+2> USING INTEGER
+
+package bit_Manupulation;
+import java.util.Scanner;
+public class P_17 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int msb = (int)(Math.log(n) / Math.log(2))+1;
+        int res = ((1<<msb)-1) ^ n;
+		System.out.println(res);
+		
+
+	}
+
+}
