@@ -1,0 +1,16 @@
+class Solution {
+    static long convertEvenBitToZero(long n) {
+        // code here
+        long num=0;
+       long bit,index=0;
+       while(n!=0){
+           bit=n%2;
+           n=n/2;
+           if(index%2==1 && bit==1){
+               num=num+(int)Math.pow(2,index);
+           }
+           index++;
+       }
+       return num;
+    }
+}
