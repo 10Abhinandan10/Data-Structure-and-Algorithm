@@ -1,0 +1,11 @@
+class Solution{
+	void toBinary(int N) {
+		String s="";
+		while(N>0){
+		    int n=N%2;
+		    s=n+s;
+		    N=N/2;
+		}
+		System.out.print(s);
+	}
+}
