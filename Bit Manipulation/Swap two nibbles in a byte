@@ -1,0 +1,45 @@
+package bit_Manupulation;
+import java.util.Scanner;
+public class P_24 {
+	public static void main(String agrs[]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Number: ");
+		int n=sc.nextInt();
+		String s="";
+		
+		while(n>0) {
+			int r=n%2;
+			s=r+s;
+			n=n/2;
+		}
+		System.out.println(s);
+		int l=s.length();
+		System.out.println(l);
+		int c=0;
+		for(int i=1;i<=l;i=i+1) {
+			c=c+1;
+		}
+		System.out.println(c);
+		int r=8-c;
+		System.out.println(r);
+		String ss="";
+		for(int j=0;j<r;j=j+1) {
+			ss=ss+"0";
+		}
+		if(c%2!=0) {
+			String s1=ss+s;
+			String nn=s1.substring(0,4);
+			String nw=s1.substring(4);
+			String gn=nw+nn;
+			int d=Integer.parseInt(gn,2);
+			System.out.println(d);
+		}else if(c%2==0) {
+			String s2=ss+s;
+			String nn1=s2.substring(0,4);
+			String nw2=s2.substring(4);
+			String gn5=nw2+nn1;
+			int d5=Integer.parseInt(gn5,2);
+			System.out.println(d5);
+		}
+	}
+}
