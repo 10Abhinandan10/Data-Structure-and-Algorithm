@@ -1,0 +1,24 @@
+package bit_Manupulation;
+import java.util.Scanner;
+public class P_25 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Number: ");
+		int n=sc.nextInt();
+		System.out.println("Enter value for 1st toggle: ");
+		int L=sc.nextInt();
+		System.out.println("Enter value for 2nd toggle: ");
+		int R=sc.nextInt();
+		int a=0;
+		int b=1;
+		for(int i=1;i<=R;i=i+1) {
+			if(i>=L) {
+				a=a|b;
+			}
+			b=b<<1;
+		}
+		n=n^a;
+		System.out.println(n);
+	}
+}
