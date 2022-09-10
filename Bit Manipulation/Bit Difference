@@ -1,0 +1,23 @@
+package bit_Manupulation;
+import java.util.Scanner;
+public class P_35 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Number: ");
+		int a =sc.nextInt();
+		System.out.println("Enter a Number: ");
+		int b=sc.nextInt();
+		int c=a^b;
+		String s=Integer.toBinaryString(c);
+		int l=s.length();
+		int count=0;
+		for(int i=0;i<l;i=i+1) {
+			char ch=s.charAt(i);
+			if(ch=='1') {
+				count=count+1;
+			}
+		}
+		System.out.println(count);
+	}
+}
