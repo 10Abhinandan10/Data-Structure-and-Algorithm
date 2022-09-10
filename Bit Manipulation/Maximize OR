@@ -1,0 +1,18 @@
+package bit_Manupulation;
+import java.util.Scanner;
+public class P_39 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter X: ");
+		int X=sc.nextInt();
+		int c=0;
+        int i=X;
+        while(X>0){
+            X=X&(X-1);
+            c=c+1;
+        }
+        int t=i-(1<<c)+1;
+        System.out.println(t);
+	}
+}
