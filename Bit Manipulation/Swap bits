@@ -1,0 +1,13 @@
+class Solution{
+    
+    int swapBits(int x, int p1, int p2, int n)
+    {
+        int a = (x>>p1) & ((1<<n)-1);
+          int b = (x>>p2) & ((1<<n)-1);
+          
+          int c = a^b;
+          
+          c = (c<<p1) | (c<<p2);
+          return c^x;
+    }
+}
