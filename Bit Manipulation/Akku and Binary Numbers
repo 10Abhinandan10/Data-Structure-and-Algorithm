@@ -1,0 +1,20 @@
+class Solution{  
+    void precompute(){
+        // Code Here
+    }
+    long solve(long L, long R){
+        // Code here
+        long count = 0L;
+        for(long i = 1L; i < R; i <<= 1L){
+            for(long j = (i << 1); j < R; j <<= 1){
+                for(long k = (j << 1); k < R; k <<= 1){
+                    long num = (i | j | k);
+                    if(L <= num && num <= R){
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }
+}
